@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A pug's life...">
+    <meta name="author" content="Stephen Bannister">
+    <link rel="stylesheet" href="css/style.css">
+    <title>The Ariel Web App</title>
+  </head>
+
+<body>
+    <div class="grid-container">
+        <div class="item1">
+            <h1><em>Welcome to the wonderful world of Ariel!</em></h1>
+        </div>
+
+        <div class="item2">
+            <div id="header-placeholder"></div>
+        </div>
+        
+        <div class="item4">
+            <h2>Contact Ariel:</h2>
+            <form name="contact" target="_blank" onsubmit="return validateForm()">
+                <fieldset>
+                    <legend>Personal Information:</legend>
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname" placeholder="John" size="25" autofocus onfocusout="addTick(this)">
+                    <span class="tick">&#10004;</span>
+                    <p class="validation" id="validateFname"></p>
+                    <br>
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Smith" size="25" onfocusout="addTick(this)">
+                    <span class="tick">&#10004;</span>
+                    <p class="validation" id="validateLname"></p>
+                    <br>
+                    <label id="postResult">Your Postcode:</label>
+                    <input id="postcode" placeholder="Postcode">
+                    <button type="button" onclick="findPostcode()">Lookup</button>
+                    <br>
+                    <br>
+                    <p class="inLine">Your city is: </p><p class="inLine" id="city">Enter postcode to see</p>
+                    <br>
+                    <br>
+                    <label for="country">Which country do you live in?</label>
+                    <select id="country" name="country" onchange="addTick(this)">
+                        <option value=""></option>
+                        <option value="England">England</option>
+                        <option value="Scotland">Scotland</option>
+                        <option value="Wales">Wales</option>
+                        <option value="Northern Ireland">Northern Ireland</option>
+                        <option value="Elsewhere">Elsewhere</option>
+                    </select>
+                    <span class="tick">&#10004;</span>
+                    <br>
+                    <br>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                    <br>
+                    <br>
+                    <label for="email">Enter your email address:</label>
+                    <input type="email" id="email" name="email" onfocusout="addTick(this)">
+                    <span class="tick">&#10004;</span>
+                    <p class="validation" id="validateEmail"></p>
+                    <br>
+                    <label for="havepug">Do you have a pug?</label>
+                    <input type="radio" id="yes" name="havepug" value="yes">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="havepug" value="no">
+                    <label for="yes">No</label><br>
+                    <br>
+                </fieldset>
+                <br>
+                <br>
+                <fieldset>
+                    <legend>Enquiries:</legend>
+                <p>Please choose which topics you'd like more information on:</p>
+                <br>
+                <input type="checkbox" id="subject1" name="subject1" value="outfits">
+                <label for="subject1">Tell me more about Ariel's outfits</label><br>
+                <input type="checkbox" id="subject2" name="subject2" value="diet">
+                <label for="subject2">Tell me more about Ariel's diet</label><br>
+                <input type="checkbox" id="subject3" name="subject3" value="history">
+                <label for="subject3">Tell me more about Ariel's history</label><br>
+                <br>
+                <textarea name="message" rows="10" cols="30" placeholder="Is there anything else you'd like to say to Ariel?"></textarea>
+                <br>
+                </fieldset>
+                <br>
+                <input type="submit" value="Submit"> <input type="reset"><br>
+            </form>
+
+
+        </div>
+
+        <div class="item5">
+            <div id="footer-placeholder"></div>
+        </div>
+
+    <script src="js/script.js">
+    </script>
+</body>
+
+</html>

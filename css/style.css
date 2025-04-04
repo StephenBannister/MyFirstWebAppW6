@@ -1,0 +1,225 @@
+/* For references, see index.html */
+
+* {
+margin: 0;
+box-sizing: border-box;
+}
+
+body {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'access access access access access access'
+    'header header header header header header'
+    'menu menu menu menu menu menu'
+    'main main main main main main'
+    'lower lower lower lower lower lower'
+    'footer footer footer footer footer footer';
+    gap: 10px;
+    background-color: pink;
+    padding: 10px;
+}
+
+.grid-container > div {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.item1 {
+    grid-area: header;
+    background-color: rgb(250, 98, 124);
+    text-align: center;
+    color: #ffffff;
+}
+
+.item1 > h1 {
+    font-size: 40px;
+}
+
+.item2 {
+    grid-area: menu;
+}
+
+.item2 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(250, 98, 124);
+    justify-self: center;
+}
+
+.item2 li {
+    float: left;
+}
+
+.item2 li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: 2px solid white;
+}
+
+.item2 li a:hover {
+    background-color: #333;
+    color: white;
+}
+
+.item3 {
+    grid-area: main;
+}
+
+.item3 > h1 {
+    font-size: 30px;
+    margin-bottom: 7px;
+    text-align: center;
+}
+
+.item3 > p {
+    margin-bottom: 7px;
+    text-align: center;
+}
+
+.item3 img {
+    width: 94%;
+    max-width: 600px;
+    margin: auto;
+    display: block;
+}
+
+.item4 {
+    grid-area: lower;
+    width: 90%;
+    border: 2px solid rgb(250, 98, 124);
+    background-color: white;
+    color: #000000;
+    justify-self: center;
+  }
+  
+.item4 > h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  
+.item4 li {
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+
+.item4 textarea {
+    width:250px;
+    height:300px;
+}
+
+.item4 .input-box {
+    background-color: rgb(243, 243, 243);
+}
+
+.item4 .button-green {
+    background-color: lightgreen;
+    font-weight: bold;
+}
+
+.item4 .button-orange {
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+/* Settings for the tick used to show input in the form, hidden by default */
+.item4 .tick {
+    margin-left: 8px;
+    color: green;
+    visibility: hidden;
+  }
+
+.item4 .inLine { 
+    display: inline 
+}
+
+.item5 {
+    grid-area: footer;
+    background-color: rgb(250, 98, 124);
+    color: #ffffff;
+    text-align: center;
+}
+
+/*Settings for the photogrid */
+.photogrid {
+    grid-area: main;
+    display: grid;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.photogrid > div {
+    background-color: black;
+    padding: 5px;
+}
+
+.photogrid img {
+    max-width: 300px;
+}
+
+/* Mobile settings for a variety of screen widths */
+@media only screen and (min-width: 350px) {
+    .photogrid {
+        grid-template-columns: auto;
+    }
+
+    .item1 > h1 {
+        font-size: 25px;
+    }
+
+    .item2 li a {
+        font-size: 14px;
+    }
+
+    .item3 > h1 {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 650px) {
+    .photogrid {
+        grid-template-columns: auto auto;
+    }
+    .item1 > h1 {
+        font-size: 32px;
+    }
+
+    .item2 li a {
+        font-size: 20px;
+    }
+
+    .item3 > h1 {
+        font-size: 26px;
+    }
+
+}
+
+
+@media only screen and (min-width: 950px) {
+    .photogrid {
+        grid-template-columns: auto auto auto;
+    }
+    .item1 > h1 {
+        font-size: 40px;
+    }
+
+    .item3 > h1 {
+        font-size: 30px;
+    }
+}
+
+
+@media only screen and (min-width: 1250px) {
+    .photogrid {
+        grid-template-columns: auto auto auto auto;
+    }
+}
