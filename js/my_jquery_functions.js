@@ -29,7 +29,7 @@ function checkAnswer() {
 
 // This loads the quizdata from a JSON file and presents a random question on page initiation
 $(document).ready(function () {
-    $.getJSON("data/quizdata.json", function (data) {
+    $.getJSON("/data/quizdata.json", function (data) {
         quizData = data;
         if (quizData.length > 0) {
             displayRandomQuestion();
