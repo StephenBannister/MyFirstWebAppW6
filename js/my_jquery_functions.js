@@ -1,8 +1,8 @@
 // Quiz Functionality Section
 
 // Initiates the currentQuestion and quizData variables
-let quizData = [];
-let currentQuestion = {};
+//let quizData = [];
+//let currentQuestion = {};
 
 // Get and display a random question
 function displayRandomQuestion() {
